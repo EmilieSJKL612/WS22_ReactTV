@@ -2,8 +2,8 @@
 import "./shows.css";
 
 import { useState } from "react";
-import EpisodeList from "./EpisodeList.jsx";
-import EpisodeDetails from "./EpisodeDetails.jsx";
+import EpisodeList from "../episodes/EpisodeList.jsx";
+import EpisodeDetails from "../episodes/EpisodeDetails.jsx";
 
 
 /** Allows users to browse through the episodes of the given show */
@@ -32,7 +32,7 @@ export default function ShowDetails({ show }) {
     <EpisodeList
         episodes={show.episodes}
         selectedEpisode={selectedEpisode}
-        onEpisodeSelect={setSelectedEpisode}
+        setSelectedEpisode={setSelectedEpisode}
     />
       <EpisodeDetails episode={selectedEpisode} />
   </div>
